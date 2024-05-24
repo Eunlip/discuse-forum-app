@@ -24,9 +24,9 @@
     "no-alert": "off",
     "no-tabs": "off",
     "linebreak-style": "off",
-    "jsx-a11y/label-has-associated-control": "off",
     "import/no-extraneous-dependencies": "off",
     "react/require-default-props": "off",
-    "react/jsx-props-no-spreading": "off"
+    "react/jsx-props-no-spreading": "off",
+    "jsx-a11y/label-has-associated-control": "off"
   }
 }
