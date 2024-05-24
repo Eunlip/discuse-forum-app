@@ -7,13 +7,17 @@ export default function Layout({ authUser, signOut }) {
   return (
     <div>
       {!authUser ? (
-        <Outlet />
+        <div data-testid="outlet">
+          <Outlet />
+        </div>
       ) : (
         <div>
           <Navbar authUser={authUser} signOut={signOut} />
-          <Outlet />
+          <div data-testid="outlet">
+            <Outlet />
+          </div>
         </div>
-      ) }
+      )}
     </div>
   );
 }

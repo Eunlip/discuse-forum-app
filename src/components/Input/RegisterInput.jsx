@@ -7,10 +7,12 @@ import PropTypes from 'prop-types';
 import Button from '../Button';
 import useInput from '../../hooks/useInput';
 
-export default function RegisterInput({ register }) {
-  const [name, onNameChange] = useInput('');
-  const [email, onEmailChange] = useInput('');
-  const [password, onPasswordChange] = useInput('');
+export default function RegisterInput({
+  register, defaultName = '', defaultEmail = '', defaultPassword = '',
+}) {
+  const [name, onNameChange] = useInput(defaultName);
+  const [email, onEmailChange] = useInput(defaultEmail);
+  const [password, onPasswordChange] = useInput(defaultPassword);
   const [showPassword, setShowPassword] = useState(true);
 
   const toggleShowPassword = () => {
@@ -72,4 +74,7 @@ export default function RegisterInput({ register }) {
 
 RegisterInput.propTypes = {
   register: PropTypes.func.isRequired,
+  defaultName: PropTypes.string,
+  defaultEmail: PropTypes.string,
+  defaultPassword: PropTypes.string,
 };

@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 import Button from '../Button';
 import useInput from '../../hooks/useInput';
 
-export default function LoginInput({ login }) {
-  const [email, onEmailChange] = useInput('');
-  const [password, onPasswordChange] = useInput('');
+export default function LoginInput({ login, defaultEmail = '', defaultPassword = '' }) {
+  const [email, onEmailChange] = useInput(defaultEmail);
+  const [password, onPasswordChange] = useInput(defaultPassword);
   const [showPassword, setShowPassword] = useState(true);
 
   const toggleShowPassword = () => {
@@ -56,4 +56,6 @@ export default function LoginInput({ login }) {
 
 LoginInput.propTypes = {
   login: PropTypes.func.isRequired,
+  defaultEmail: PropTypes.string,
+  defaultPassword: PropTypes.string,
 };

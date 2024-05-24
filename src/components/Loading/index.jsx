@@ -3,7 +3,7 @@ import LoadingBar from 'react-redux-loading-bar';
 
 export default function index() {
   return (
-    <div className="sticky top-0 z-50">
+    <div data-testid="loading-bar" className="sticky top-0 z-50">
       <LoadingBar />
     </div>
   );

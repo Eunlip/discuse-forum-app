@@ -20,11 +20,11 @@ function asyncFetchLeaderboards() {
       const response = await api.getLeaderboards();
       dispatch(receiveLeaderboardsActionCreator(response));
     } catch (error) {
-      alert('Error fetching leaderboards', error);
+      alert(error.message);
     } finally {
       dispatch(hideLoading());
     }
   };
 }
 
-export { asyncFetchLeaderboards, ActionType };
+export { asyncFetchLeaderboards, receiveLeaderboardsActionCreator, ActionType };

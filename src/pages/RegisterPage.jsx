@@ -13,6 +13,11 @@ export default function RegisterPage() {
   const onRegister = ({ name, email, password }) => {
     // Regular expression to validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (name === '') {
+      alert('Name cannot be empty');
+      return;
+    }
+
     if (!emailRegex.test(email)) {
       alert('Please enter a valid email address.');
       return;

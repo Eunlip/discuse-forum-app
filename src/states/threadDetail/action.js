@@ -76,7 +76,7 @@ function neutralVoteCommentActionCreator(threadId, commentId, userId) {
 }
 
 // thunk function
-function asyncReceiveThreadDetail(threadId) {
+function asyncReceiveThreadDetail(threadId, setLoading) {
   return async (dispatch) => {
     dispatch(showLoading());
     dispatch(clearThreadDetailActionCreator());
@@ -88,6 +88,7 @@ function asyncReceiveThreadDetail(threadId) {
       alert('thread tidak ditemukan');
     } finally {
       dispatch(hideLoading());
+      setLoading(false);
     }
   };
 }

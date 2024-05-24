@@ -23,7 +23,7 @@ function postedAt(date) {
 }
 
 function filterThreads(threads, keyword) {
-  return threads.filter((thread) => thread.category.toLowerCase().includes(keyword.toLowerCase()));
+  return threads.filter((thread) => thread.title.toLowerCase().includes(keyword.toLowerCase()));
 }
 
 export { postedAt, filterThreads };

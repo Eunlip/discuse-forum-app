@@ -23,11 +23,11 @@ function asyncFetchFilteredThreads(keyword) {
       const filteredThreads = filterThreads(response, keyword);
       dispatch(filterThreadsActionCreator(filteredThreads));
     } catch (error) {
-      console.error(error.message);
+      alert(error.message);
     } finally {
       dispatch(hideLoading());
     }
   };
 }
 
-export { ActionType, asyncFetchFilteredThreads };
+export { ActionType, filterThreadsActionCreator, asyncFetchFilteredThreads };

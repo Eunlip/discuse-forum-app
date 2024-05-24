@@ -22,6 +22,7 @@ export default function ThreadReplyInput({ replyComment }) {
         <Avatar src={avatar} alt={avatar} size="sm" />
         <textarea
           type="text"
+          data-testId="content-input"
           className="w-full p-5 border rounded-lg bg-blue-gray-50 focus:outline-none focus:shadow-inner h-44 "
           value={content}
           onChange={onContentChange}

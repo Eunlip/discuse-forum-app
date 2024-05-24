@@ -21,6 +21,7 @@ export default function ThreadInput({ createThread }) {
           <input
             type="text"
             id="title"
+            data-testid="title-input"
             className="w-full px-4 py-3 border-2 rounded-lg placeholder:text-lg"
             value={title}
             onChange={onTitleChange}
@@ -33,6 +34,7 @@ export default function ThreadInput({ createThread }) {
             <input
               type="text"
               id="category"
+              data-testid="category-input"
               className="w-full py-3 border-2 rounded-lg px-7 placeholder:text-lg"
               value={category}
               onChange={onCategoryChange}
@@ -44,6 +46,7 @@ export default function ThreadInput({ createThread }) {
         <div className="my-8">
           <textarea
             className="w-full h-56 px-4 py-3 border-2 rounded-lg placeholder:text-xl"
+            data-testid="body-input"
             value={body}
             onChange={onBodyChange}
             placeholder="Please fill in what u would like to discuss ..."
@@ -56,5 +59,5 @@ export default function ThreadInput({ createThread }) {
 }
 
 ThreadInput.propTypes = {
-  createThread: PropTypes.func.isRequired,
+  createThread: PropTypes.func,
 };

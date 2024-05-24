@@ -7,4 +7,10 @@ export default defineConfig({
   optimizeDeps: {
     include: ['react-redux'],
   },
+  esbuild: {
+    loader: 'jsx',
+  },
+  test: {
+    environment: 'jsdom',
+  },
 });

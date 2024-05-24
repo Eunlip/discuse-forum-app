@@ -36,8 +36,8 @@ export default function Index({ authUser, signOut }) {
     </ul>
   );
 
-  const authButtons = authUser ? (
-    <div className="items-center hidden lg:flex">
+  const authButtons = (
+    <div className="items-center hidden container-nav lg:flex">
       <div className="flex items-center gap-2 mr-5">
         <Avatar src={avatar} size="sm" alt={id} title={name} />
         <Typography className="text-xl text-outerSpace">{name}</Typography>
@@ -50,27 +50,10 @@ export default function Index({ authUser, signOut }) {
         />
       </Link>
     </div>
-  ) : (
-    <div className="flex items-center gap-x-3">
-      <Button
-        variant="text"
-        size="sm"
-        className="text-sm font-medium text-white capitalize bg-inherit hover:text-opacity-80"
-      >
-        <Link to="/login">Login</Link>
-      </Button>
-      <Button
-        variant="filled"
-        size="sm"
-        className="text-sm font-medium capitalize border rounded-md hover:bg-opacity-95 bg-bussYellow text-yankeesBlue border-mustardYellow"
-      >
-        <Link to="/register">Register</Link>
-      </Button>
-    </div>
   );
 
   return (
-    <Navbar className="fixed top-0 z-10 max-w-full p-4 border-gray-100 border-none rounded-none bg-blue-gray-200 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-40 lg:px-16 lg:py-7">
+    <Navbar className="fixed top-0 z-10 max-w-full p-4 border-gray-100 border-none rounded-none nav bg-blue-gray-200 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-40 lg:px-16 lg:py-7">
       <div className="flex items-center justify-between mx-auto max-w-screen-2xl text-blue-gray-900">
         <img src={Logo} alt="Logo" />
         <div className="flex items-center justify-start gap-10">
